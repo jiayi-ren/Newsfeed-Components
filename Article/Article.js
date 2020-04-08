@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'title',
+    date: 'date', 
+    firstParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quidem aperiam, corporis explicabo consectetur quos eaque blanditiis nesciunt officiis aspernatur corrupti omnis repellat nisi, aliquid veniam incidunt ea id voluptates.`, 
+
+    secondParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quidem aperiam, corporis explicabo consectetur quos eaque blanditiis nesciunt officiis aspernatur corrupti omnis repellat nisi, aliquid veniam incidunt ea id voluptates.`,
+
+    thirdParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quidem aperiam, corporis explicabo consectetur quos eaque blanditiis nesciunt officiis aspernatur corrupti omnis repellat nisi, aliquid veniam incidunt ea id voluptates.`
   }
 ];
 
