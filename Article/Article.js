@@ -122,7 +122,7 @@ const data = [
 
 */
 
-function articleMaker({title,date,firstParagraph,secondParagraph,thirdParagraph}){
+function ArticleMaker({title,date,firstParagraph,secondParagraph,thirdParagraph}){
   const article = document.createElement("div")
   const articleTitle = document.createElement("h2")
   const articleDate = document.createElement("p")
@@ -158,7 +158,7 @@ function articleMaker({title,date,firstParagraph,secondParagraph,thirdParagraph}
 }
 
 const articleData = data.map(article => {
-  return articleMaker(article)
+  return ArticleMaker(article)
 })
 
 const articles = document.querySelector(".articles")
