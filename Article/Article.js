@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'title',
+    date: 'date', 
+    firstParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quidem aperiam, corporis explicabo consectetur quos eaque blanditiis nesciunt officiis aspernatur corrupti omnis repellat nisi, aliquid veniam incidunt ea id voluptates.`, 
+
+    secondParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quidem aperiam, corporis explicabo consectetur quos eaque blanditiis nesciunt officiis aspernatur corrupti omnis repellat nisi, aliquid veniam incidunt ea id voluptates.`,
+
+    thirdParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quidem aperiam, corporis explicabo consectetur quos eaque blanditiis nesciunt officiis aspernatur corrupti omnis repellat nisi, aliquid veniam incidunt ea id voluptates.`
   }
 ];
 
@@ -112,3 +121,47 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+function ArticleMaker({title,date,firstParagraph,secondParagraph,thirdParagraph}){
+  const article = document.createElement("div")
+  const articleTitle = document.createElement("h2")
+  const articleDate = document.createElement("p")
+  const paragraphFirst = document.createElement("p")
+  const paragraphSecond = document.createElement("p")
+  const paragraphThird = document.createElement("p")
+  const button = document.createElement("span")
+
+  article.appendChild(articleTitle)
+  article.appendChild(articleDate)
+  article.appendChild(paragraphFirst)
+  article.appendChild(paragraphSecond)
+  article.appendChild(paragraphThird)
+  article.appendChild(button)
+
+  article.classList.add("article")
+  articleDate.classList.add("date")
+  button.classList.add("expandButton")
+
+  articleTitle.textContent = title
+  articleDate.textContent = date
+  paragraphFirst.textContent = firstParagraph
+  paragraphSecond.textContent = secondParagraph
+  paragraphThird.textContent = thirdParagraph
+  button.textContent = "expand"
+
+  button.addEventListener("click", event => {
+    article.classList.toggle("article-open")
+
+  })
+
+  return article
+}
+
+const articleData = data.map(article => {
+  return ArticleMaker(article)
+})
+
+const articles = document.querySelector(".articles")
+articleData.forEach(article =>{
+  articles.appendChild(article)
+})
